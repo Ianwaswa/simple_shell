@@ -1,5 +1,7 @@
 #include "shell.h"
 #include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * print_alias - add, remove or display aliases
@@ -7,7 +9,9 @@
  * @alias: name of alias to be output
  * Return: zero for success or any number if declared in the arguments
  */
+
 int print_alias(data_of_program *data, char *alias)
+
 {
 	int i, j, alias_length;
 	char buffer[250] = {'\0'};
