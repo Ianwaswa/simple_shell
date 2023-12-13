@@ -84,3 +84,4 @@ int count_characters(char *string, char *character)
 	}
 	return (counter);
 }
+

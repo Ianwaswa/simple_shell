@@ -110,3 +110,4 @@ int set_alias(char *alias_string, data_of_program *data)
 		data->alias_list[j] = str_duplicate(alias_string);
 	return (0);
 }
+
