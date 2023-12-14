@@ -1,12 +1,15 @@
 #include "shell.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
- * expand_variables - expand variables
- * @data: a pointer to a struct of the program's data
- *
- * Return: nothing, but sets errno.
+ * expand_variables - expands variables on execution
+ * @data: pointer to struct of variables 
+ * Return: Nothing
  */
+
 void expand_variables(data_of_program *data)
+
 {
 	int i, j;
 	char line[BUFFER_SIZE] = {0}, expansion[BUFFER_SIZE] = {'\0'}, *temp;
@@ -51,12 +54,13 @@ void expand_variables(data_of_program *data)
 }
 
 /**
- * expand_alias - expans aliases
- * @data: a pointer to a struct of the program's data
- *
- * Return: nothing, but sets errno.
+ * expand_alias - expands aliases
+ * @data: pointer to a struct of program data
+ * Return: nothing
  */
+
 void expand_alias(data_of_program *data)
+
 {
 	int i, j, was_expanded = 0;
 	char line[BUFFER_SIZE] = {0}, expansion[BUFFER_SIZE] = {'\0'}, *temp;
@@ -98,7 +102,9 @@ void expand_alias(data_of_program *data)
  * @str_to_add: string to be copied in the buffer
  * Return: nothing, but sets errno.
  */
+
 int buffer_add(char *buffer, char *str_to_add)
+
 {
 	int length, i;
 
