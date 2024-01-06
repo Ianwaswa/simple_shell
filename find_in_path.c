@@ -3,12 +3,13 @@
 int check_file(char *full_path);
 
 /**
- * find_program - find a program in path
+ * find_program - finds a program in path
  * @data: a pointer to the program's data
- * Return: 0 if success, errcode otherwise
+ * Return: 0 if success, otherwise for error
  */
 
 int find_program(data_of_program *data)
+
 {
 	int i = 0, ret_code = 0;
 	char **directories;
@@ -58,6 +59,7 @@ int find_program(data_of_program *data)
  */
 
 char **tokenize_path(data_of_program *data)
+
 {
 	int i = 0;
 	int counter_directories = 2;
